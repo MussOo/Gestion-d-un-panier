@@ -1,0 +1,20 @@
+{
+  "name": "api-mon-panier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run json-server",
+    "forward": "adb reverse tcp:7000 tcp:7000",
+    "json-server": "json-server -H 0.0.0.0 --port 7000 --watch data.json",
+    "delay-api": "npm run json-server -- --middlewares=delay.js",
+    "api": "npm run json-server",
+    "ngrok": "ngrok http 7000"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "json-server": "^0.16.2"
+  }
+}
